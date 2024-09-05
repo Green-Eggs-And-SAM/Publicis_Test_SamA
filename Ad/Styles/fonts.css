@@ -1,0 +1,11 @@
+h1 {
+    font-family: "Avenir";
+    src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("otf");
+    font-weight: 600;
+}
+
+h3 {
+    font-family: "Avenir";
+    src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("otf");
+    font-weight: 400;
+}
