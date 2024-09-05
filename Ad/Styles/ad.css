@@ -14,10 +14,15 @@ img.red-banner {
 }
 img.logo {
   width: 200px;
-  transform: translateY(50px);
+  height: 200px;
+  transform: translate(45px, 25px);
 }
 
 button:hover {
   color: aqua;
   z-index: 2;
+}
+
+.hide-at-start {
+  display: none;
 }/*# sourceMappingURL=ad.css.map */
