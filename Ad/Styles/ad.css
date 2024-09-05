@@ -1,28 +1,66 @@
 body {
   margin: 0;
+  position: absolute;
 }
 
 img {
   position: absolute;
 }
 img.building {
-  width: 400px;
+  width: 450px;
+  transform: translate(-75px, -45px);
 }
 img.red-banner {
   width: 300px;
-  transform: translateY(-100px);
+  transform: translateY(-70px);
 }
 img.logo {
   width: 200px;
   height: 200px;
-  transform: translate(45px, 25px);
+  transform: translate(45px, 35px);
+}
+img.office {
+  display: none;
+}
+img.title {
+  display: none;
+}
+
+h1,
+h2,
+h3 {
+  display: flex;
+  color: white;
+  margin: 0;
+  justify-content: center;
+  line-height: 1;
+}
+
+.txt-container {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+}
+
+.frame-2 {
+  transform: translateY(200px);
+}
+
+.lead-the-change,
+.txt2A,
+.txt2B {
+  display: flex;
+  opacity: 0;
+}
+
+.txt2A {
+  line-height: 2;
 }
 
 button:hover {
   color: aqua;
   z-index: 2;
-}
-
-.hide-at-start {
-  display: none;
 }/*# sourceMappingURL=ad.css.map */
