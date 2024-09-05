@@ -48,7 +48,7 @@ h3 {
 }
 
 .frame-2 {
-    transform: translate(-70px, 200px);
+    transform: translateY(200px);
 }
 
 .lead-the-change,
@@ -60,6 +60,7 @@ h3 {
 
 .txt2A {
     line-height: 2; // extra line spacing for
+    transform: translateX(-70px);
 }
 
 button:hover {

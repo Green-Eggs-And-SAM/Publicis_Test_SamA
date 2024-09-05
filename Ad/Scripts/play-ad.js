@@ -2,7 +2,7 @@ const buildingImg = document.querySelector(".building");
 const logo = document.querySelector(".logo");
 const redBG = document.querySelector(".red-banner");
 const txt2A = document.querySelector(".txt2A");
-const txt2B = document.querySelector(".txt2B");
+const txt2B = document.querySelectorAll(".txt2B");
 const frame2 = document.querySelector(".frame-2");
 
 window.addEventListener("load", reveal);
@@ -21,9 +21,16 @@ function reveal() {
         .to(redBG, { y: 140, duration: 0.8 }, "-=0.25"); //slide redBG down. start this animation 0.25 seconds early
 
     //====== Frame 2a ======
-    tl.from(buildingImg, { scale: 2.3, y: -300, duration: 6 }, "-=1.5") //start from the left //slide redBG down. start this animation 1 second early
+    tl.from(
+        buildingImg,
+        { scale: 2.3, y: -300, x: -50, duration: 2.5 },
+        "-=1.5"
+    ) //start from the left //slide redBG down. start this animation 1 second early
         // tl.from(txt2A, { x: -70, duration: 0.5 })
-        .to(txt2A, { x: 70, autoAlpha: 1, duration: 1 }, "-=5")
-        .to(redBG, { y: 90, duration: 0.8 }, "-=3.25") //slide redBG up. start this animation 0.25 seconds early
-        .to(frame2, { y: 90, duration: 0.8 }, "-=3.25");
+        .to(txt2A, { x: 0, autoAlpha: 1, duration: 1 }, "-=1") // center and reveal text (from 70px left)
+        .to(redBG, { y: 80, duration: 0.5, delay: 0.25 }) //slide redBG up. start this animation 3.25 seconds early
+        .to(frame2, { y: 140, duration: 0.5 }, "-=0.5");
+
+    //====== Frame 2b ======
+    tl.to(txt2B, { autoAlpha: 1, duration: 1 });
 }
