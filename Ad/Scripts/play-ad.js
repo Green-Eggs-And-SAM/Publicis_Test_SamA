@@ -22,8 +22,8 @@ function reveal() {
 
     //====== Frame 2a ======
     tl.from(buildingImg, { scale: 2.3, y: -300, duration: 6 }, "-=1.5") //start from the left //slide redBG down. start this animation 1 second early
-        .from(txt2A, { x: -70, duration: 0 })
-        .to(txt2A, { x: 0, autoAlpha: 1, duration: 1 }, "-=5.5");
-    // .to(redBG, { y: 90, duration: 0.8 }, "-=3.25") //slide redBG up. start this animation 0.25 seconds early
-    // .to(frame2, { y: 90, duration: 0.8 }, "-=3.25");
+        // tl.from(txt2A, { x: -70, duration: 0.5 })
+        .to(txt2A, { x: 70, autoAlpha: 1, duration: 1 }, "-=5")
+        .to(redBG, { y: 90, duration: 0.8 }, "-=3.25") //slide redBG up. start this animation 0.25 seconds early
+        .to(frame2, { y: 90, duration: 0.8 }, "-=3.25");
 }
