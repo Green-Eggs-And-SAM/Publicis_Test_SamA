@@ -12,7 +12,8 @@ h2 {
     font-size: 1.5rem;
 }
 
-h3 {
+h3,
+button {
     font-family: "Avenir";
     src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("otf");
     font-weight: 400;

@@ -1,4 +1,4 @@
-body {
+* body {
     margin: 0;
     position: absolute;
 }
@@ -21,10 +21,15 @@ img {
         transform: translate(45px, 35px);
     }
     &.office {
-        display: none; //hide at start
+        width: 400px;
+        transform: translateY(-120px);
+        opacity: 0; //hide at start
     }
     &.title {
-        display: none; //hide at start
+        width: 120px;
+        transform: translate(15px, 15px);
+
+        opacity: 0; //hide at start
     }
 }
 
@@ -37,7 +42,9 @@ h3 {
     justify-content: center;
     line-height: 1;
 }
-.txt-container {
+
+//flexbox for all text and buttons. help them remain centered
+.flex-container {
     width: 300px;
     height: 250px;
     display: flex;
@@ -47,6 +54,7 @@ h3 {
     z-index: 1;
 }
 
+//===== Frame 2A & 2B =====
 .frame-2 {
     transform: translateY(200px);
 }
@@ -63,7 +71,66 @@ h3 {
     transform: translateX(-70px);
 }
 
-button:hover {
-    color: aqua;
-    z-index: 2;
+//===== Frame 3 =====
+
+.frame-3 {
+    transform: translateY(75px);
 }
+
+//===== Frame 4 =====
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    padding-right: 2rem;
+    position: absolute;
+}
+
+.frame-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-crop-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+}
+
+.btn-crop-container button {
+    display: block;
+}
+
+//debugging lines. These help highlight each element even when they are hidden.
+//uncomment these to reveal. comment to hide.
+// * {
+//     border: 1px dotted rgb(0, 194, 201);
+// }
+
+// h1,
+// h2,
+// h3 {
+//     border: 1px dotted rgb(175, 0, 155);
+// }
+
+// .frame-2 {
+//     border: 2px solid rgb(0, 172, 175);
+// }
+// .frame-3 {
+//     border: 2px solid rgb(0, 255, 42);
+// }
+
+.frame-4,
+.frame-4 * {
+    border: 2px solid rgb(0, 255, 42);
+}
+
+// .title {
+//     border: 2px solid rgb(0, 255, 42);
+// }

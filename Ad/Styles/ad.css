@@ -1,4 +1,4 @@
-body {
+* body {
   margin: 0;
   position: absolute;
 }
@@ -20,10 +20,14 @@ img.logo {
   transform: translate(45px, 35px);
 }
 img.office {
-  display: none;
+  width: 400px;
+  transform: translateY(-120px);
+  opacity: 0;
 }
 img.title {
-  display: none;
+  width: 120px;
+  transform: translate(15px, 15px);
+  opacity: 0;
 }
 
 h1,
@@ -36,7 +40,7 @@ h3 {
   line-height: 1;
 }
 
-.txt-container {
+.flex-container {
   width: 300px;
   height: 250px;
   display: flex;
@@ -61,7 +65,39 @@ h3 {
   transform: translateX(-70px);
 }
 
-button:hover {
-  color: aqua;
-  z-index: 2;
+.frame-3 {
+  transform: translateY(75px);
+}
+
+button {
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  border: none;
+  padding-right: 2rem;
+  position: absolute;
+}
+
+.frame-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-crop-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+}
+
+.btn-crop-container button {
+  display: block;
+}
+
+.frame-4,
+.frame-4 * {
+  border: 2px solid rgb(0, 255, 42);
 }/*# sourceMappingURL=ad.css.map */
