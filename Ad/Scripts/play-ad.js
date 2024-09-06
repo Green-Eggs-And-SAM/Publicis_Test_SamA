@@ -5,13 +5,14 @@ const redBG = document.querySelector(".red-banner");
 //get logos
 const logo = document.querySelector(".logo");
 const title = document.querySelector(".title");
+const arrow = document.querySelector(".arrow");
 
 //get text
 const txt2A = document.querySelector(".txt2A"); //"PUBLICIS TORONTO IS HIRING"
 const txt2B = document.querySelectorAll(".txt2B"); //["JUNIOR INTERACTIVE" + "DEVELOPERS"]
 const txt3 = document.querySelectorAll(".lead-the-change"); //["LEAD" + "THE" + "CHANGE"]
 const frame2 = document.querySelector(".frame-2"); //txt2A and txt2B (frame2A and frame2B)
-const btnApply = document.querySelector();
+const btnApply = document.querySelector(".btn-crop-container");
 
 window.addEventListener("load", playAnimation);
 
@@ -26,7 +27,6 @@ function playAnimation() {
             ease: "power2.out", //a nice easing effect for all animations.
         },
     });
-    tl.from;
 
     //====== Frame 1 ======
     tl.from(logo, { scale: 0.1, autoAlpha: 0, duration: 1 }) //fade in logo
@@ -56,6 +56,31 @@ function playAnimation() {
 
     //====== Frame 4 ======
     tl.to(redBG, { y: -310, duration: slideTime }) //slide red up
-        .to(title, { autoAlpha: 1, duration: fadeTime })
-        .from(officeImg, { x: -100, duration: 5 }, "-=0.8"); // fade in title
+        .to(title, { autoAlpha: 1, duration: fadeTime }) // fade in title
+
+        .from(btnApply, { autoAlpha: 0, duration: 0.1 }) //reveal button
+        .from(btnApply, { width: 0, duration: 1 }) //crop effect
+        .from(officeImg, { x: -100, duration: 5 }, "-=1.8"); // office pan
+}
+let i = 0;
+// document
+//     .getElementById("main")
+//     .addEventListener("onmouseenter", startArrowJiggle());
+// console.log(document.getElementById("main"));
+const jiggleTL = gsap.timeline({
+    default: {
+        ease: "sine.inOut", //a nice easing effect for all animations.
+    },
+    repeat: -1,
+});
+function startArrowJiggle() {
+    jiggleTL
+        .play()
+        .to(arrow, { x: "+=10", duration: 0.2 })
+        .to(arrow, { x: "-=10", duration: 0.2 });
+}
+
+function endArrowJiggle() {
+    console.log("end");
+    jiggleTL.pause();
 }

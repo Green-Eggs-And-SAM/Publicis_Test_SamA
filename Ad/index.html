@@ -9,10 +9,14 @@
     </head>
     <body>
         <h1>Sam Alexander</h1>
-
-        <div onclick="adClicked()" class="iframe--container">
-            <a class="iframe--link" href=" https://www.publicis.ca/"></a>
-            <iframe class="iframe--ad" src="./ad.html" scrolling="no"> </iframe>
+        <!--  -->
+        <div
+            onmouseenter="hoverEvent()"
+            onmouseleave="endHoverEvent()"
+            id="iframe--container"
+        >
+            <a id="iframe--link" href=" https://www.publicis.ca/"></a>
+            <iframe id="iframe--ad" src="./ad.html" scrolling="no"> </iframe>
         </div>
 
         <script src="./Scripts/app.js"></script>

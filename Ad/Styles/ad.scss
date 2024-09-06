@@ -12,8 +12,8 @@ img {
     }
 
     &.red-banner {
-        width: 300px;
-        transform: translateY(-70px);
+        width: 304px;
+        transform: translate(-2px, -70px);
     }
     &.logo {
         width: 200px;
@@ -41,6 +41,12 @@ h3 {
     margin: 0;
     justify-content: center;
     line-height: 1;
+}
+
+#main {
+    width: 300px;
+    height: 250px;
+    border: 1px solid black;
 }
 
 //flexbox for all text and buttons. help them remain centered
@@ -78,37 +84,40 @@ h3 {
 }
 
 //===== Frame 4 =====
-
-button {
-    background-color: black;
-    color: white;
-    border-radius: 7px;
-    border: none;
-    padding-right: 2rem;
-    position: absolute;
-}
-
 .frame-4 {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 .btn-crop-container {
-    display: block;
+    position: absolute;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 30px;
-    height: 30px;
+    width: 130px;
+    height: 18px;
+
+    border-radius: 6px;
+    background-color: black;
+    padding: 3px;
+    padding-top: 6px;
 }
 
-.btn-crop-container button {
-    display: block;
+.apply-now {
+    width: 100px;
+    padding-right: 1rem;
+}
+
+.arrow {
+    position: absolute;
+    transform: translate(102px, -15px);
 }
 
 //debugging lines. These help highlight each element even when they are hidden.
 //uncomment these to reveal. comment to hide.
+
 // * {
 //     border: 1px dotted rgb(0, 194, 201);
 // }
@@ -126,10 +135,10 @@ button {
 //     border: 2px solid rgb(0, 255, 42);
 // }
 
-.frame-4,
-.frame-4 * {
-    border: 2px solid rgb(0, 255, 42);
-}
+// .frame-4,
+// .frame-4 * {
+//     border: 2px solid rgb(0, 255, 42);
+// }
 
 // .title {
 //     border: 2px solid rgb(0, 255, 42);
